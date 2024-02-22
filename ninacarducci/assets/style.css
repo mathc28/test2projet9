@@ -1,0 +1,473 @@
+body {
+	max-width: 1920px;
+	margin: auto;
+}
+* {
+	font-style: normal;
+}
+.top-header {
+	background-color: white;
+	position: sticky;
+	top:0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	padding-inline: 100px;
+	padding-block: 30px;
+	align-items: center;
+}
+
+.top-header .name {
+	font-size: 26px;
+}
+
+.nav ul {
+	display: flex;
+	list-style-type: none;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.nav li {
+	padding-inline: 10px;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #000
+}
+
+.social-link img {
+	width: 20px;
+}
+
+
+.containercarousel {
+    overflow: hidden;
+    /* Cache les éléments qui dépassent du container */
+}
+/* Définition du carousel */
+.carousel {
+    position: relative;
+    /* Le carousel est positionné relativement à son parent */
+}
+/* Définition de l'élément contenant les diapositives */
+.carousel-inner {
+    display: flex;
+    /* Affiche les éléments en ligne */
+    overflow: hidden;
+    /* Cache les éléments qui dépassent */
+    height: 100vh;
+    /* Hauteur égale à 100% de la hauteur de la vue */
+    flex-wrap: nowrap;
+    /* Empêche les éléments de se placer sur plusieurs lignes */
+}
+/* Définition des diapositives */
+.slide {
+    flex: 0 0 100%;
+    /* Largeur de chaque diapositive est de 100% */
+    height: 100%;
+    /* Hauteur de chaque diapositive est de 100% */
+    transition: .5s ease-in-out;
+    /* Ajout d'une animation douce pour la transition entre les diapositives */
+}
+/* Définition de l'affichage de l'image de chaque diapositive */
+.slide img {
+    width: 100%;
+    /* Largeur de l'image est de 100% */
+    height: 100%;
+    /* Hauteur de l'image est de 100% */
+    object-fit: cover;
+    /* Couvre tout l'espace disponible */
+}
+/* Définition des boutons de contrôle du carousel */
+.carousel-controls {
+    position: absolute;
+    /* Les boutons sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 10%;
+    /* La distance à gauche est de 10% */
+    right: 10%;
+    /* La distance à droite est de 10% */
+    top: 50%;
+    /* La distance du haut est de 50% */
+    display: flex;
+    /* Affiche les boutons en ligne */
+    justify-content: space-between;
+    /* Espacement égal entre les boutons */
+}
+/* Style des boutons de contrôle */
+.carousel-controls button {
+   background: none;
+   border: none;
+   
+}
+
+.carousel-controls img {
+    width: 20px;
+    height: 32px;
+}
+
+/* Définition des points de contrôle */
+
+
+.carousel-dots {
+    position: absolute;
+    /* Les points sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 45%;
+    /* La distance à gauche est de 50% */
+    right: 50%;
+    /* La distance à droite est de 50% */
+    bottom: 5%;
+    /*La distance du bas est de 10% */
+    display: flex;
+    /* Affiche les points en ligne */
+    justify-content: center;
+    /* Centrage des points */
+    width: 100px;
+}
+/* Style des points de contrôle */
+.carousel-dots .dot {
+    
+    /* Les points sont en forme de cercle */
+    margin: 5px;
+    /* Ajout d'un margin pour un meilleur contrôle */
+    cursor: pointer;
+    /* Curseur en forme de main pour un meilleur contrôle */
+    height: 3px ;
+    width: 30px ;
+
+}
+
+/* Styles pour les points de navigation du carrousel */
+.carousel-dots .active {
+   
+    /* Border de 10px pour le point actif */
+    border: 1px solid white !important;
+    /* !important permet de surcharger les autres styles éventuels */
+    background: white;
+
+}
+.carousel-dots .inactive {
+    
+    /* Border de 10px pour les points inactifs  10px solid*/
+    border: 1px solid white;
+    opacity: 0.5;
+    background: rgb(255, 255, 255);
+}
+
+#about {
+	display: flex;
+	background-color: #F6D2B8;
+	padding-inline: 100px;
+	padding-block: 100px;
+	position: relative;
+}
+
+.picture.left::before {
+	content: ' ';
+	background-color: #E5975F;
+	width: 374px;
+	height: 329px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.picture {
+	flex: 1;
+	margin: 0 20px;
+	z-index: 0;
+}
+
+.picture img {
+	width: 100%;
+
+}
+#about-me {
+	flex: 2
+}
+.about-me__title {
+	margin-top: 1em;
+	margin-bottom: 60px;
+	font-size: 30px;
+}
+.about-me__introduction {
+	font-size: 16px;
+	font-weight: 800;
+	font-style: italic;
+	width: 60%;
+}
+#about-me p {
+	width: 80%;
+	font-size: 14px;
+}
+
+#gallery {
+	/*	min-height: 100vh; */
+}
+.title{
+	text-align: center;
+	padding-block: 2em;
+}
+.gallery .nav {
+	justify-content: center;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color:black;
+	background-color: #BEB45A;
+	border-radius:0 ;
+}
+.nav-pills .nav-link {
+	color: #000
+}
+.item-column {
+	position: relative;
+	margin-bottom: 0 !important;
+	padding: 0;
+}
+.item-column::after{
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+
+}
+.gallery-item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	padding: .5em;
+}
+.mg-prev, .mg-next {
+	width: 30px;
+	height: 30px;
+	border-radius: 00%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	font-size: 24px;
+}
+
+.quote {
+	font-family: 'Spectral';
+	font-style: italic;
+	width: 70%;
+	margin: auto;
+	padding-block: 3em;
+}
+.quote__text {
+	font-family: Spectral;
+	font-style: italic;
+	font-weight: 300;
+
+}
+.quote__author {
+	font-family: Spectral;
+	font-weight: 800;
+	font-size: 22px;
+}
+
+#services {
+	margin: auto;
+	background-color: #A8D5D8 ;
+	position: relative;
+}
+#services .container::before{
+	content: ' ';
+	background-color: #1C6474;
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+
+#services .container {
+	justify-content: space-between;
+	display: flex;
+	padding : 2em 0;
+
+}
+
+.service {
+	background-color: white;
+	max-width: 390px;
+	width: 30%;
+	height: 337px;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+#contact {
+	margin: auto;
+	background-color: #D8D3A8 ;
+	position: relative;
+	padding-inline: 100px;
+	padding-block: 100px;
+}
+
+#contact .container {
+	display: flex;
+}
+.picture.right::before {
+	content: ' ';
+	background-color: #BEB45A;
+	width: 374px;
+	height: 329px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+.form-container {
+	flex : 2;
+
+}
+form {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	align-items: flex-start;
+}
+
+form input {
+	width: 100%;
+	background-color: transparent;
+	border: solid 1px;
+	height: 2.5em;
+	margin-bottom: 20px;
+}
+
+form textarea {
+	width: 100%;
+	background-color: transparent;
+	border: solid 1px;
+	height: 5em;
+	line-height: 2.5em;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+input[type="submit"] {
+	background-color: #BEB45A;
+	padding: .5em 1em
+}
+
+@media all and (max-width: 1180px) {
+	.picture {
+		flex : 2;
+	}
+	#about, #contact .container {
+		align-items: center;
+	}
+	.about-me__title {
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+	#about-me h2, #about-me p {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 1000px) {
+	#about{
+		flex-direction: column;
+
+	}
+	.picture {
+		width: 50%;
+	}
+	.picture.left::before {
+		width: 100%;
+		height: 30%;
+		position: absolute;
+		bottom: auto;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	.about-me__title{
+		text-align: center;
+		margin-top: 1em;
+	}
+	#services .container {
+		flex-direction: column;
+	}
+	.service {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		margin: 2em 0
+	}
+	.service__description{
+		margin-bottom: 1em;
+	}
+
+	#services .container::before{
+		width: 30%;
+		height: 100%;
+		bottom: 0;
+		right: 0;
+		left: auto;
+		z-index: 0;
+	}
+
+	#contact .container {
+		flex-direction: column;
+	}
+	#contact .picture.right {
+		margin-top: 1em;
+	}
+	.picture.right::before {
+		width: 100%;
+		height: 30%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+}
+
+@media all and (max-width: 650px) {
+	.top-header {
+		flex-direction: column;
+		padding-inline: 0;
+	}
+	.top-header .nav, .top-header .nav ul {
+		width: 100%;
+		padding: 0 0 0 0;
+	}
+	.top-header .nav li {
+		flex: 1;
+		padding-block: 1em;
+		text-align: center;
+	}
+	.picture.left::before, .picture.right::before {
+		height: 150px;
+	}
+	#services .container {
+		align-items: center;
+	}
+	.service {
+		max-width: 90%;
+	}
+	#about, #contact {
+		padding-inline: 2em;
+		padding-block: 2em;
+	}
+	form {
+		width: 100%;
+	}
+	.picture {
+		width: 80%;
+	}
+}
+
